@@ -1,0 +1,88 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:padding="16dp"
+
+    tools:context=".MainActivity">
+
+
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="381dp"
+        android:layout_height="171dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
+        android:layout_marginEnd="0dp"
+        android:layout_marginRight="0dp" />
+
+
+
+    <Button
+        android:id="@+id/buttonStart"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
+        android:layout_marginStart="18dp"
+        android:layout_marginLeft="18dp"
+        android:layout_marginTop="119dp"
+        android:onClick="begin"
+        android:text="Begin" />
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <com.sdsmdg.harjot.crollerTest.Croller
+            android:id="@+id/croller"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:back_circle_color="#EDEDED"
+            app:indicator_color="#0B3C49"
+            app:indicator_width="6"
+            app:is_continuous="true"
+            app:label=""
+            app:label_color="#000000"
+            app:main_circle_color="#FFFFFF"
+            app:max="100"
+            app:progress_primary_circle_size="5"
+            app:progress_primary_color="#0B3C49"
+            app:progress_secondary_circle_size="4"
+            app:progress_secondary_color="#EEEEEE"
+            app:start_offset="30"
+            app:sweep_angle="300"
+            tools:layout_editor_absoluteX="229dp"
+            tools:layout_editor_absoluteY="214dp" />
+
+        <TextView
+
+            android:id="@+id/batteryMaxChargeView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+
+
+            android:gravity="center"
+            android:text="@string/_100"
+            android:textSize="35sp"
+            app:layout_constraintBottom_toBottomOf="@+id/croller"
+            app:layout_constraintEnd_toEndOf="@+id/croller"
+            app:layout_constraintStart_toStartOf="@+id/croller"
+            app:layout_constraintTop_toTopOf="@+id/croller" />
+
+
+    </FrameLayout>
+
+
+    <TextView
+        android:id="@+id/batteryChargeView"
+        android:layout_width="379dp"
+        android:layout_height="41dp"
+        android:layout_below="@+id/textView"
+        android:layout_marginTop="302dp" />
+
+
+
+</RelativeLayout>
